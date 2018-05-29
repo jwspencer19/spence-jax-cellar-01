@@ -36,6 +36,8 @@ show grants for 'testuser05'@'localhost';
 
 http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
 
+https://www.joezimjs.com/javascript/introduction-to-backbone-js-part-1-models-video-tutorial/
+
 https://github.com/ccoenraets/wine-cellar-java
 https://github.com/ccoenraets/backbone-jax-cellar
 https://github.com/ccoenraets/backbone-cellar
