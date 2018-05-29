@@ -1,0 +1,47 @@
+MySQL Notes
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" MySQL80
+
+my.ini - editted:
+# The default authentication plugin to be used when connecting to the server
+#SPENCER:HERE
+#default_authentication_plugin=caching_sha2_password
+default_authentication_plugin=mysql_native_password
+
+
+mysql> create database cellar;
+mysql> use cellar;
+mysql> source C:\Git_repo\Tutorial\backbone-jax-cellar\cellar.sql
+mysql> select * from wine;
+
+SELECT User, Host FROM mysql.user;
+CREATE USER 'testuser02'@'localhost' IDENTIFIED BY 'netscout1';
+GRANT ALL PRIVILEGES ON *.* TO 'testuser02'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'testuser03'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'testuser03'@'localhost' WITH GRANT OPTION;
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON cellar.* TO 'testuser02'@'localhost';
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON cellar.* TO 'testuser03'@'localhost';
+
+show grants for 'testuser02'@'localhost';
+
+
+CREATE USER 'testuser05'@'localhost'
+GRANT ALL PRIVILEGES ON *.* TO 'testuser05'@'localhost' WITH GRANT OPTION;
+
+show grants for 'testuser05'@'localhost';
+
+-----
+
+http://coenraets.org/blog/2011/12/backbone-js-wine-cellar-tutorial-part-1-getting-started/
+
+https://github.com/ccoenraets/wine-cellar-java
+https://github.com/ccoenraets/backbone-jax-cellar
+https://github.com/ccoenraets/backbone-cellar
+
+
+http://localhost:8080/cellar
+
+http://localhost:8080/cellar/rest/wines
+
